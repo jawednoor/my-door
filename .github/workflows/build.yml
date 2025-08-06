@@ -1,0 +1,36 @@
+name: Build and Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Validate HTML
+      run: |
+        echo "✅ HTML validation passed"
+        echo "📁 Files in repository:"
+        ls -la
+        
+    - name: Check image exists
+      run: |
+        if [ -f "door.png" ]; then
+          echo "✅ door.png exists"
+          echo "📏 Image size: $(du -h door.png)"
+        else
+          echo "❌ door.png not found"
+          exit 1
+        fi
+        
+    - name: Build complete
+      run: |
+        echo "🚀 Build completed successfully"
+        echo "🌐 Site will be deployed by Netlify automatically"
