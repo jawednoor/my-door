@@ -12,8 +12,8 @@
     <!-- Meta tags for WhatsApp link preview -->
     <meta property="og:title" content="صورة الباب للتوصيل">
     <meta property="og:description" content="يرجى التأكد من الباب قبل التسليم">
-    <meta property="og:image" content="https://raw.githubusercontent.com/jawednoor/my-door/main/door.png">
-    <meta property="og:image:secure_url" content="https://raw.githubusercontent.com/jawednoor/my-door/main/door.png">
+    <meta property="og:image" content="https://i.imgur.com/euSBJIv.jpg">
+    <meta property="og:image:secure_url" content="https://i.imgur.com/euSBJIv.jpg">
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="600">
     <meta property="og:image:type" content="image/jpeg">
@@ -32,76 +32,16 @@
     <meta name="twitter:image:height" content="630">
     
     <!-- Additional meta for better preview -->
-    <link rel="image_src" href="https://raw.githubusercontent.com/jawednoor/my-door/main/door.png">
-    <meta name="thumbnail" content="https://raw.githubusercontent.com/jawednoor/my-door/main/door.png">
+    <link rel="image_src" href="https://i.imgur.com/euSBJIv.jpg">
+    <meta name="thumbnail" content="https://i.imgur.com/euSBJIv.jpg">
     
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="صورة الباب للتوصيل">
     <meta name="twitter:description" content="يرجى التأكد من الباب قبل التسليم">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/jawednoor/my-door/main/door.png">
+    <meta name="twitter:image" content="https://i.imgur.com/euSBJIv.jpg">
     
     <title>صورة الباب للتوصيل</title>
-    
-    <script>
-    // إنشاء صورة محسنة للمشاركة
-    function createOptimizedImage() {
-        const img = new Image();
-        img.crossOrigin = 'anonymous';
-        img.onload = function() {
-            const canvas = document.createElement('canvas');
-            const ctx = canvas.getContext('2d');
-            
-            // تحديد أبعاد محسّنة للمشاركة
-            canvas.width = 800;
-            canvas.height = 600;
-            
-            // رسم الصورة مع خلفية بيضاء
-            ctx.fillStyle = '#ffffff';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            
-            // حساب النسب للحفاظ على شكل الصورة
-            const aspectRatio = this.width / this.height;
-            let drawWidth = canvas.width - 40;
-            let drawHeight = drawWidth / aspectRatio;
-            
-            if (drawHeight > canvas.height - 40) {
-                drawHeight = canvas.height - 40;
-                drawWidth = drawHeight * aspectRatio;
-            }
-            
-            const x = (canvas.width - drawWidth) / 2;
-            const y = (canvas.height - drawHeight) / 2;
-            
-            ctx.drawImage(this, x, y, drawWidth, drawHeight);
-            
-            // تحديث meta tags
-            const dataURL = canvas.toDataURL('image/jpeg', 0.8);
-            updateMetaTags(dataURL);
-        };
-        img.src = 'door.png';
-    }
-    
-    function updateMetaTags(imageData) {
-        // تحديث meta tags بالصورة المحسّنة
-        const metaTags = [
-            'meta[property="og:image"]',
-            'meta[property="og:image:secure_url"]',
-            'meta[name="thumbnail"]',
-            'meta[property="twitter:image"]'
-        ];
-        
-        metaTags.forEach(selector => {
-            const tag = document.querySelector(selector);
-            if (tag) {
-                tag.setAttribute('content', imageData);
-            }
-        });
-    }
-    
-    // تشغيل الدالة عند تحميل الصفحة
-    window.addEventListener('load', createOptimizedImage);
-    </script>
     
     <style>
         body {
