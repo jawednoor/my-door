@@ -48,7 +48,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #ffffff;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -57,10 +57,6 @@
         }
         
         .container {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             text-align: center;
             max-width: 600px;
             width: 100%;
@@ -68,55 +64,24 @@
         
         h1 {
             color: #333;
-            margin-bottom: 20px;
-            font-size: 2em;
+            margin-bottom: 30px;
+            font-size: 1.8em;
+            font-weight: 500;
         }
         
         .door-image {
             width: 100%;
             max-width: 500px;
             height: auto;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            margin: 20px 0;
+            margin: 20px 0 30px 0;
         }
         
         .description {
-            color: #666;
+            color: #555;
             font-size: 1.1em;
             line-height: 1.6;
             margin: 20px 0;
-        }
-        
-        .share-info {
-            background: #e8f5e8;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 20px;
-            border-left: 4px solid #28a745;
-        }
-        
-        .share-info h3 {
-            margin-top: 0;
-            color: #155724;
-        }
-        
-        .share-info p {
-            margin-bottom: 0;
-            color: #155724;
-            font-size: 0.9em;
-            line-height: 1.5;
-        }
-        
-        /* تحسين عرض الصورة لمعاينة WhatsApp */
-        .door-image {
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            margin: 20px 0;
-            border: 3px solid #28a745;
+            text-align: center;
         }
     </style>
 </head>
@@ -127,19 +92,12 @@
         <img src="door.png" alt="House door for delivery agent | باب المنزل لمندوب التوصيل" class="door-image">
         
         <div class="description">
-            <p><strong>For Delivery Agent | لمندوب التوصيل:</strong><br>
+            <p><strong>For Delivery Agent | لمندوب التوصيل:</strong><br><br>
             This is the correct house door. Please verify this door before delivery.<br>
             هذا هو باب المنزل الصحيح. يرجى التأكد من هذا الباب قبل التسليم.<br><br>
             The door has distinctive metal designs as shown in the image.<br>
-            الباب مزين بتصاميم معدنية مميزة كما هو موضح في الصورة.</p>
-        </div>
-        
-        <div class="share-info">
-            <h3>📋 Delivery Instructions | تعليمات التوصيل</h3>
-            <p>• Verify the door matches the image | تأكد من مطابقة الباب مع الصورة<br>
-            • The door has distinctive metal designs | الباب له تصاميم معدنية مميزة<br>
-            • If unsure, contact the customer | في حالة عدم التأكد، اتصل بالعميل<br><br>
-            <small>🔄 Auto-updated via Netlify | محدث تلقائياً عبر Netlify</small></p>
+            الباب مزين بتصاميم معدنية مميزة كما هو موضح في الصورة.<br><br>
+            If unsure, contact the customer | في حالة عدم التأكد، اتصل بالعميل</p>
         </div>
     </div>
 </body>
