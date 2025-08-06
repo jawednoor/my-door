@@ -78,6 +78,7 @@
         
         .door-image {
             max-width: 100%;
+            width: 100%;
             height: auto;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -85,6 +86,9 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
+            object-fit: contain;
+            background-color: #f8f9fa;
+            border: 2px solid #e9ecef;
         }
         
         .description {
@@ -442,7 +446,23 @@
 </head>
 <body>
     <div class="container">        
-        <img src="door.png" alt="House door for delivery agent | باب المنزل لمندوب التوصيل" class="door-image">
+        <!-- محاولة تحميل الصورة بطرق متعددة -->
+        <picture>
+            <source srcset="https://my-door-delivery.netlify.app/door.png" type="image/png">
+            <source srcset="./door.png" type="image/png">
+            <img src="door.png" 
+                 alt="House door for delivery agent | باب المنزل لمندوب التوصيل" 
+                 class="door-image"
+                 loading="eager"
+                 onerror="this.style.display='none'; document.getElementById('image-fallback').style.display='block';"
+                 onload="console.log('Image loaded successfully');">
+        </picture>
+        
+        <!-- نص بديل في حال فشل تحميل الصورة -->
+        <div id="image-fallback" style="display: none; background: #f8f9fa; padding: 2rem; border-radius: 15px; margin-bottom: 1.5rem; border: 2px dashed #dee2e6;">
+            <h3 style="color: #6c757d; margin: 0;">🚪 صورة الباب</h3>
+            <p style="color: #6c757d; margin: 0.5rem 0;">الصورة غير متاحة حالياً</p>
+        </div>
         
         <div class="description">
             <p>🏠 هذا هو الباب الصحيح، يرجى التأكد من هذا الباب قبل التسليم<br>
